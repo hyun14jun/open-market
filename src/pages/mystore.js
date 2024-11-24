@@ -1,17 +1,14 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function MyStore() {
-  const router = useRouter();
   const [storeInfo] = useState({
     storeName: '싱싱 상회',
     sellerName: '이현준',
     contact: '010-6687-2088'
-
   });
  
-
   const [products] = useState([
     {
       id: '1',
@@ -19,40 +16,37 @@ export default function MyStore() {
       description: '국내산 고품질 딸기',
       price: 25000,
       imageUrl: '/images/strawberry.jpg'
-      
     },
-    // 더미 데이터 추가 가능
   ]);
-
-
-
-
   
   return (
     <div className="min-h-screen bg-gray-100">
       <header className="bg-white shadow">
-  <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex justify-between h-16">
-      <div className="flex items-center">
-        <a href="/" className="text-2xl font-bold text-gray-900">오픈마켓</a>
-      </div>
-      <div className="flex items-center space-x-4">
-        <a href="/" className="text-gray-700 hover:text-gray-900 px-3 py-2">
-          홈
-        </a>
-        <a href="/mystore" className="text-gray-700 hover:text-gray-900 px-3 py-2">
-          내 스토어
-        </a>
-        <a href="/register-seller" className="text-gray-700 hover:text-gray-900 px-3 py-2">
-          판매자 등록
-        </a>
-        <a href="/login" className="text-gray-700 hover:text-gray-900 px-3 py-2">
-          로그인
-        </a>
-      </div>
-    </div>
-  </nav>
-</header>
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16">
+            <div className="flex items-center">
+              <Link href="/" className="text-2xl font-bold text-gray-900">
+                오픈마켓
+              </Link>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link href="/" className="text-gray-700 hover:text-gray-900 px-3 py-2">
+                홈
+              </Link>
+              <Link href="/mystore" className="text-gray-700 hover:text-gray-900 px-3 py-2">
+                내 스토어
+              </Link>
+              <Link href="/register-seller" className="text-gray-700 hover:text-gray-900 px-3 py-2">
+                판매자 등록
+              </Link>
+              <Link href="/login" className="text-gray-700 hover:text-gray-900 px-3 py-2">
+                로그인
+              </Link>
+            </div>
+          </div>
+        </nav>
+      </header>
+
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl font-bold mb-8 text-black">내 스토어 관리</h2>

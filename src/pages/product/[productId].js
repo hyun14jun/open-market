@@ -63,14 +63,24 @@ export default function ProductDetail() {
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
-                <h1 className="text-2xl font-bold text-gray-900">오픈마켓</h1>
+                <Link href="/" className="text-2xl font-bold text-gray-900">
+                  오픈마켓
+                </Link>
               </div>
             </div>
             <div className="flex items-center">
-              <a href="/" className="text-gray-700 hover:text-gray-900 px-3 py-2">홈</a>
-              <a href="/mystore" className="text-gray-700 hover:text-gray-900 px-3 py-2">내 스토어</a>
-              <a href="/login" className="text-gray-700 hover:text-gray-900 px-3 py-2">로그인</a>
-              <a href="/register-seller" className="text-gray-700 hover:text-gray-900 px-3 py-2">판매자 등록</a>
+              <Link href="/" className="text-gray-700 hover:text-gray-900 px-3 py-2">
+                홈
+              </Link>
+              <Link href="/mystore" className="text-gray-700 hover:text-gray-900 px-3 py-2">
+                내 스토어
+              </Link>
+              <Link href="/login" className="text-gray-700 hover:text-gray-900 px-3 py-2">
+                로그인
+              </Link>
+              <Link href="/register-seller" className="text-gray-700 hover:text-gray-900 px-3 py-2">
+                판매자 등록
+              </Link>
             </div>
           </div>
         </nav>
