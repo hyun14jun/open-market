@@ -15,8 +15,8 @@ export default function ProductDetail() {
       const products = {
         '1': {
           id: '1',
-          name: '돌쇠가 말아주는 딸기 농장',
-          description: '새콤달콤한 딸기 1kg',
+          name: '겨울철 기모 맨투맨',
+          description: '색깔 12종',
           price: 25000,
           imageUrl: '/images/strawberry.jpg',
           seller: '돌쇠네 농장',
